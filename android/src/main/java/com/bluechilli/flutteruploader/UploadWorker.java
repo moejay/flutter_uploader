@@ -397,18 +397,18 @@ public class UploadWorker extends ListenableWorker implements CountProgressListe
 
   private String GetMimeType(String url) {
     String type = "application/octet-stream";
-    String extension = MimeTypeMap.getFileExtensionFromUrl(url);
-    try {
-      if (extension != null && !extension.isEmpty()) {
-        String mimeType =
-            MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension.toLowerCase());
-        if (mimeType != null && !mimeType.isEmpty()) {
-          type = mimeType;
-        }
-      }
-    } catch (Exception ex) {
-      Log.d(TAG, "UploadWorker - GetMimeType", ex);
-    }
+//    String extension = MimeTypeMap.getFileExtensionFromUrl(url);
+//    try {
+//      if (extension != null && !extension.isEmpty()) {
+//        String mimeType =
+//            MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension.toLowerCase());
+//        if (mimeType != null && !mimeType.isEmpty()) {
+//          type = mimeType;
+//        }
+//      }
+//    } catch (Exception ex) {
+//      Log.d(TAG, "UploadWorker - GetMimeType", ex);
+//    }
 
     return type;
   }
